@@ -13,7 +13,7 @@ Tailwind Transpiler transpile your tailwind CSS/SCSS file to pure CSS file.
 ### Transpile tailwind files
 
 Transpile tailwind CSS/SCSS files on `Save`.
-//add Image
+<img src="https://github.com/sudoaugustin/tailwindcss-transpiler/blob/master/.github/app-preview.png">
 
 ### Autoprefix
 
