@@ -1,0 +1,88 @@
+{
+  "name": "tailwind-transpiler",
+  "displayName": "Tailwind Transpiler",
+  "description": "",
+  "version": "0.0.7",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/*.tailwind.[s]css",
+    "onLanguage:scss",
+    "onLanguage:css"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Tailwind Transpiler Setting",
+      "properties": {
+        "tailwindTranspiler.browsersList": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "default": [
+            "> 1%",
+            "last 2 versions"
+          ],
+          "description": "Add vendor prefixes to unsupported CSS properties (e. g. transform -> -ms-transform). Specify what browsers to target with an array of strings (uses [Browserslist](https://github.com/ai/browserslist)). Pass `null` to turn off."
+        },
+        "tailwindTranspiler.minifyOutputFile": {
+          "type": "boolean",
+          "default": false,
+          "description": "Check to minify the output file."
+        },
+        "tailwindTranspiler.savePath": {
+          "description": "Set the save location of exported CSS.\n Set the relative path from Workspace Root.\n  (NOTE: if folder does not exist, folder will be created as well).",
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[\\~|/|\\\\]",
+          "default": null
+        },
+        "tailwindTranspiler.tailwindConfigPath": {
+          "description": "Set the location of tailwind config file.\n Set the relative path from Workspace Root.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[\\~|/|\\\\]",
+          "default": "tailwind.config.js"
+        }
+      }
+    }
+  },
+  "main": "./extension.js",
+  "icon": "media/icon.png",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.49.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^14.0.27",
+    "eslint": "^7.9.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.0.2",
+    "vscode-test": "^1.4.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.0",
+    "clean-css": "^4.2.3",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.0.5",
+    "postcss-clean": "^1.1.0",
+    "postcss-prettify": "^0.3.4",
+    "precss": "^4.0.0",
+    "tailwindcss": "^1.8.10",
+    "uglifycss": "0.0.29",
+    "vscode": "^1.1.37"
+  }
+}
