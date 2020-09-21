@@ -12,25 +12,25 @@ Tailwind Transpiler transpile/compile your tailwind CSS/SCSS files into pure CSS
 
 Transpile tailwind CSS/SCSS files `On Save`.
 
-<img src="./media/features/transpileOnSave.png">
+<img src="https://github.com/sudoaugustin/tailwindcss-transpiler/tree/master/.github/features/transpileOnSave.png">
 
 ### Autoprefix
 
 Add vendor prefixes to your CSS.
 
-<img src="./media/features/autoprefix.png">
+<img src="https://github.com/sudoaugustin/tailwindcss-transpiler/tree/master/.github/features/autoprefix.png">
 
 ### SCSS supported
 
 Get the features provided by SCSS with `.tailwind.scss`
 
-<img src="./media/features/scssSupported.png">
+<img src="https://github.com/sudoaugustin/tailwindcss-transpiler/tree/master/.github/features/scssSupported.png">
 
 ### Optimize CSS
 
 Optimize CSS using [clean-css](https://github.com/jakubpawlowicz/clean-css).
 
-<img src="./media/features/optimizeCSS.png">
+<img src="https://github.com/sudoaugustin/tailwindcss-transpiler/tree/master/.github/features/optimizeCSS.png">
 
 ## Requirements
 
