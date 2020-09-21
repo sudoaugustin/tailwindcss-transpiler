@@ -1,8 +1,6 @@
 # Tailwind Transpiler
 
-//add Image
-
-Tailwind Transpiler transpile your tailwind CSS/SCSS file to pure CSS file.
+Tailwind Transpiler transpile/compile your tailwind CSS/SCSS files to pure CSS files.
 
 ## Installation
 
@@ -13,14 +11,23 @@ Tailwind Transpiler transpile your tailwind CSS/SCSS file to pure CSS file.
 ### Transpile tailwind files
 
 Transpile tailwind CSS/SCSS files on `Save`.
-<img src="https://github.com/sudoaugustin/tailwindcss-transpiler/blob/master/.github/app-preview.png">
+
+<img src="./media/features/transpileOnSave.png">
 
 ### Autoprefix
 
 Add vendor prefixes to your CSS.
 //add Image
 
-### SCSS
+### SCSS supported
+
+Get the features provided by SCSS and Tailwind with `.tailwind.scss`
+
+<img src="./media/features/scssSupported.png">
+
+### Optimize CSS
+
+//add Image
 
 Use the SCSS features with `.tailwind.scss`
 
@@ -42,7 +49,8 @@ Controls whether the exported CSS should be compressed.**Default: `false`**
 
 ### `tailwindTranspiler.savePath`
 
-This setting sets the custom path to store transpiled CSS._Set the path relative from workspace root._ **Default: `null`**
+The path to store transpiled CSS.**Default: `null`**
+<br/>_Set the path relative from workspace root._
 
 ```json
 {
@@ -52,7 +60,8 @@ This setting sets the custom path to store transpiled CSS._Set the path relative
 
 ### `tailwindTranspiler.tailwindConfigPath`
 
-This setting sets the location of tailwind configuration file._Set the path relative from workspace root._ **Default: `tailwind.config.js`**
+The path for tailwind configuration file. **Default: `tailwind.config.js`**
+<br/>_Set the path relative from workspace root._
 
 ```json
 {
@@ -72,4 +81,9 @@ This setting controls the target browsers.See [Browserslist](https://github.com/
 
 ---
 
-If you found any bug or if you have any suggestion, feel free to report or suggest me.You can contact me on [Twitter](https://twitter.com/sudoAugustin)
+If you found any bug :grimacing: or if you have any suggestion, feel free to report or suggest me.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :heart:.
+
+<br/>
+<p style="text-align:center;">
+<span>A project by Augustin Joseph :sunglasses:<span/>
+</p>

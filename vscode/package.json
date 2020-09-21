@@ -35,7 +35,7 @@
           "description": "Check to minify the output file."
         },
         "tailwindTranspiler.savePath": {
-          "description": "Set the save location of exported CSS.\n Set the relative path from Workspace Root.\n  (NOTE: if folder does not exist, folder will be created as well).",
+          "description": "Set the save location of exported CSS.\n Set the path relative from Workspace Root.\n  (NOTE: Folder will be created if does not exist).",
           "type": [
             "string",
             "null"
@@ -44,7 +44,7 @@
           "default": null
         },
         "tailwindTranspiler.tailwindConfigPath": {
-          "description": "Set the location of tailwind config file.\n Set the relative path from Workspace Root.",
+          "description": "Set the location of tailwind config file.\n Set the path relative from Workspace Root.",
           "type": [
             "string",
             "null"

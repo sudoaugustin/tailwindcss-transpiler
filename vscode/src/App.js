@@ -1,17 +1,12 @@
-const fs = require('fs');
-const util = require('util');
+const precss = require('precss');
 const postcss = require('postcss');
+const CleanCSS = require('clean-css');
 const tailwind = require('tailwindcss');
-const compress = require('uglifycss').processString;
+const autoprefixer = require('autoprefixer');
 const StatusBar = require('./StatusBar')();
 const OutputWindow = require('./OutputWindow')();
+const { readFile, writeFile, makeDir, fileExists } = require('./fs');
 const { isTailwindFile, getFileName, getPath, joinPath } = require('./utils');
-
-const [readFile, writeFile, mkdir] = [
-  util.promisify(fs.readFile),
-  util.promisify(fs.writeFile),
-  util.promisify(fs.mkdir),
-];
 
 const handleSuccess = () => {
   StatusBar.update('SUCCESS');
@@ -23,28 +18,32 @@ const handleError = err => {
   OutputWindow.render({ msg: err.toString() });
 };
 
+const clean = ({ css, format }) =>
+  new CleanCSS({ format, level: 2 }).minify(css).styles;
+
 exports.handleSave = ({ isSASS, rootPath, filePath }) => {
+  console.log('Save Handler Initated');
   if (!isTailwindFile(filePath)) return;
   StatusBar.update('WORKING');
   const config = require('./config')();
-  const minify = config('minifyOutputFile');
   const savePath = config('savePath');
-  const tailwindPath = config('tailwindConfigPath');
+  const minifyCSS = config('minifyOutputFile');
+  const tailwindPath = joinPath(rootPath, config('tailwindConfigPath'));
   const browsersList = config('browsersList');
-  const plugins = [
-    tailwindPath ? tailwind(joinPath(rootPath, tailwindPath)) : tailwind,
-    require('autoprefixer')(browsersList),
-    ...(isSASS ? [require('precss')] : []),
-    ...(isSASS && !minify ? [require('postcss-prettify')] : []),
-  ];
   const newPath = savePath ? joinPath(rootPath, savePath) : getPath(filePath);
+  const plugins = [
+    tailwind(fileExists(tailwindPath) ? tailwindPath : {}),
+    browsersList && autoprefixer(browsersList),
+    isSASS && precss,
+  ].filter(v => v);
+
   readFile(filePath)
     .then(data => data.toString())
     //@ts-ignore
-    .then(content => postcss(plugins).process(content, { from: undefined }))
-    .then(({ css }) => (minify ? compress(css) : css))
+    .then(css => postcss(plugins).process(css, { from: undefined }))
+    .then(({ css }) => clean({ css, format: !minifyCSS && 'beautify' }))
     .then(css => {
-      if (!fs.existsSync(newPath)) mkdir(newPath, { recursive: true });
+      if (!fileExists(newPath)) makeDir(newPath, { recursive: true });
       return css;
     })
     .then(css => writeFile(joinPath(newPath, getFileName(filePath)), css))

@@ -6,7 +6,7 @@ const StatusBar = () => {
   );
 
   const update = state => {
-    const prefix = 'Tailwind Transpiler:';
+    const prefix = 'Tailwind Transpiler : ';
     switch (state) {
       case 'WORKING':
         setProps({
