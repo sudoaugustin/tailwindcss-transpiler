@@ -10,7 +10,7 @@ Tailwind Transpiler transpile/compile your tailwind CSS/SCSS files into pure CSS
 
 ### Transpile tailwind files
 
-Transpile tailwind CSS/SCSS files on `Save`.
+Transpile tailwind CSS/SCSS files `On Save`.
 
 <img src="./media/features/transpileOnSave.png">
 
@@ -34,11 +34,11 @@ Optimize CSS using [clean-css](https://github.com/jakubpawlowicz/clean-css).
 
 ## Requirements
 
-Tailwind Transpiler works only on `.tailwind.css` or `.tailwind.scss`
+Tailwind Transpiler works only with `.tailwind.css` or `.tailwind.scss` files.
 
 ## Settings
 
-### `tailwindTranspile.minifyOutputFile`
+### `tailwindTranspiler.minifyOutputFile`
 
 Controls whether the exported CSS should be compressed.**Default: `false`**
 
@@ -80,6 +80,8 @@ This setting controls the target browsers.See [Browserslist](https://github.com/
 }
 ```
 
+<br/>
+<br/>
 ---
 
 If you found any bug :grimacing: or if you have any suggestion :unamused:, feel free to report or suggest me :bomb: :boom:.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :grinning:.
