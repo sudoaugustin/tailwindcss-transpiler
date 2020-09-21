@@ -29,11 +29,9 @@ Get the features provided by SCSS and Tailwind with `.tailwind.scss`
 
 //add Image
 
-Use the SCSS features with `.tailwind.scss`
-
 ## Requirements
 
--Tailwind Transpile works only on files with an extension `.tailwind.css` or `.tailwind.scss`
+Tailwind Transpiler works only on `.tailwind.css` or `.tailwind.scss`
 
 ## Settings
 
@@ -81,7 +79,7 @@ This setting controls the target browsers.See [Browserslist](https://github.com/
 
 ---
 
-If you found any bug :grimacing: or if you have any suggestion, feel free to report or suggest me.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :heart:.
+If you found any bug :grimacing: or if you have any suggestion:unamused:, feel free to report or suggest me :grinning:.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :boom:.
 
 <br/>
 <p style="text-align:center;">
