@@ -79,7 +79,7 @@ This setting controls the target browsers.See [Browserslist](https://github.com/
 
 ---
 
-If you found any bug :grimacing: or if you have any suggestion:unamused:, feel free to report or suggest me :grinning:.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :boom:.
+If you found any bug :grimacing: or if you have any suggestion:unamused:, feel free to report or suggest me :bomb: :boom:.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :grinning:.
 
 <br/>
 <p style="text-align:center;">
