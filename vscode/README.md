@@ -83,5 +83,5 @@ If you found any bug :grimacing: or if you have any suggestion:unamused:, feel f
 
 <br/>
 <p style="text-align:center;">
-<span>A project by Augustin Joseph :sunglasses:<span/>
+A project by Augustin Joseph :sunglasses:
 </p>
