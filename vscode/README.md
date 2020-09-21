@@ -1,6 +1,6 @@
 # Tailwind Transpiler
 
-Tailwind Transpiler transpile/compile your tailwind CSS/SCSS files to pure CSS files.
+Tailwind Transpiler transpile/compile your tailwind CSS/SCSS files into pure CSS files.
 
 ## Installation
 
@@ -17,17 +17,20 @@ Transpile tailwind CSS/SCSS files on `Save`.
 ### Autoprefix
 
 Add vendor prefixes to your CSS.
-//add Image
+
+<img src="./media/features/autoprefix.png">
 
 ### SCSS supported
 
-Get the features provided by SCSS and Tailwind with `.tailwind.scss`
+Get the features provided by SCSS with `.tailwind.scss`
 
 <img src="./media/features/scssSupported.png">
 
 ### Optimize CSS
 
-//add Image
+Optimize CSS using [clean-css](https://github.com/jakubpawlowicz/clean-css).
+
+<img src="./media/features/optimizeCSS.png">
 
 ## Requirements
 
@@ -79,7 +82,7 @@ This setting controls the target browsers.See [Browserslist](https://github.com/
 
 ---
 
-If you found any bug :grimacing: or if you have any suggestion:unamused:, feel free to report or suggest me :bomb: :boom:.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :grinning:.
+If you found any bug :grimacing: or if you have any suggestion :unamused:, feel free to report or suggest me :bomb: :boom:.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :grinning:.
 
 <br/>
 <p style="text-align:center;">
