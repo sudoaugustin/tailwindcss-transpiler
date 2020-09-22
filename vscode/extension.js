@@ -1,5 +1,5 @@
 const vscode = require('vscode');
-const { handleInit, handleSave } = require('./src/App');
+const { handleInit, handleSave } = require('./src/handlers/onSaveHandler');
 
 function activate(context) {
   handleInit();
