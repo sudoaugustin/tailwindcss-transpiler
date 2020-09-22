@@ -1,8 +1,6 @@
 # Tailwind Transpiler
 
-<figure class="video_container">
-  <iframe src="https://drive.google.com/file/d/1hJ0Qy5g0Q8ppGMvGGmxpzlcsiQboeX6o/preview" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+<img src="https://raw.githubusercontent.com/sudoaugustin/tailwindcss-transpiler/master/.github/preview.png">
 
 <br/>
 Tailwind Transpiler transpile/compile your tailwind CSS/SCSS files into pure CSS files.
