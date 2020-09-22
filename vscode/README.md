@@ -1,7 +1,7 @@
 # Tailwind Transpiler
 
 <figure class="video_container">
-  <iframe src="https://drive.google.com/file/d/1hJ0Qy5g0Q8ppGMvGGmxpzlcsiQboeX6o/view?usp=sharing" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe src="https://drive.google.com/file/d/1hJ0Qy5g0Q8ppGMvGGmxpzlcsiQboeX6o/preview" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
 
 <br/>
