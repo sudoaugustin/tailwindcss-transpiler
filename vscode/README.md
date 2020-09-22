@@ -7,7 +7,7 @@ Tailwind Transpiler transpile/compile your tailwind CSS/SCSS files into pure CSS
 
 ## Installation
 
-**[Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)**
+**[Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=sudoaugustin.tailwind-transpiler)**
 
 ## Features
 
@@ -87,7 +87,7 @@ This setting controls the target browsers.See [Browserslist](https://github.com/
 <br/>
 ---
 
-If you found any bug :grimacing: or if you have any suggestion :unamused:, feel free to report or suggest me :bomb: :boom:.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :grinning:.
+If you found any bug :clap: or if you have any suggestion , feel free to report or suggest me :pray: :bomb: :boom:.You can contact me on [Twitter](https://twitter.com/sudoAugustin) :grinning:.
 
 <br/>
 <p style="text-align:center;">

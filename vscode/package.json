@@ -2,10 +2,12 @@
   "name": "tailwind-transpiler",
   "displayName": "Tailwind Transpiler",
   "description": "Tailwind css transpiler for VS Code",
+  "author": "Augustin Joseph",
+  "publisher": "sudoaugustin",
   "preview": true,
   "license": "MIT",
   "homepage": "https://github.com/sudoaugustin/tailwindcss-transpiler/tree/master/vscode",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "bugs": {
     "url": "https://github.com/sudoaugustin/tailwindcss-transpiler/issues",
     "email": "sudoaugustin@gmail.com",
@@ -16,7 +18,7 @@
     "url": "https://github.com/sudoaugustin/tailwindcss-transpiler.git"
   },
   "engines": {
-    "vscode": "^1.0.0"
+    "vscode": "^1.49.0"
   },
   "keywords": [
     "css",
