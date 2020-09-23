@@ -7,7 +7,7 @@ Tailwind CSS Transpiler transpile/compile your tailwind CSS/SCSS files into pure
 
 ## Installation
 
-**[Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=sudoaugustin.tailwind-transpiler)**
+**[Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=sudoaugustin.tailwindcss-transpiler)**
 
 ## Features
 
