@@ -1,7 +1,7 @@
 {
-  "name": "tailwind-transpiler",
-  "displayName": "Tailwind Transpiler",
-  "description": "Tailwind css transpiler for VS Code",
+  "name": "tailwindcss-transpiler",
+  "displayName": "Tailwind CSS Transpiler",
+  "description": "Tailwind CSS transpiler for VS Code",
   "author": "Augustin Joseph",
   "publisher": "sudoaugustin",
   "preview": true,
@@ -27,9 +27,7 @@
     "tailwind",
     "compiler",
     "tailwindcs",
-    "transpiler",
-    "tailwind compiler",
-    "tailwind transpiler"
+    "transpiler"
   ],
   "categories": [
     "Other"
@@ -41,7 +39,7 @@
   ],
   "contributes": {
     "configuration": {
-      "title": "Tailwind Transpiler Setting",
+      "title": "Tailwind CSS Transpiler Setting",
       "properties": {
         "tailwindTranspiler.browsersList": {
           "type": [

@@ -1,9 +1,9 @@
-# Tailwind Transpiler
+# Tailwind CSS Transpiler
 
 <img src="https://raw.githubusercontent.com/sudoaugustin/tailwindcss-transpiler/master/.github/preview.gif">
 
 <br/>
-Tailwind Transpiler transpile/compile your tailwind CSS/SCSS files into pure CSS files.
+Tailwind CSS Transpiler transpile/compile your tailwind CSS/SCSS files into pure CSS files.
 
 ## Installation
 
@@ -37,7 +37,7 @@ Optimize CSS using [clean-css](https://github.com/jakubpawlowicz/clean-css).
 
 ## Requirements
 
-Tailwind Transpiler works only with `.tailwind.css` or `.tailwind.scss` files.
+Tailwind CSS Transpiler works only with `.tailwind.css` or `.tailwind.scss` files.
 
 ## Settings
 
