@@ -8,5 +8,4 @@ jsconfig.json
 **/.eslintrc.json
 node_modules
 src/
-tsconfig.json
-webpack.config.js
+

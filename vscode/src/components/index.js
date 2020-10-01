@@ -1,2 +1,4 @@
-exports.StatusBar = require('./StatusBar')();
-exports.OutputWindow = require('./OutputWindow')();
+module.exports = {
+  StatusBar: require("./StatusBar")(),
+  OutputChannel: require("./OutputChannel")(),
+};
