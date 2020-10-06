@@ -4,7 +4,7 @@
   "description": "Compiles your tailwindcss files into pure CSS files. Moreover, you can also use it with SASS",
   "author": "Augustin Joseph",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./dist/index.js",
   "keywords": [
     "css",
@@ -15,13 +15,13 @@
     "tailwindcs",
     "transpiler"
   ],
-  "repository": "https://github.com/sudoaugustin/tailwindcss-transpiler",
+  "repository": "https://github.com/sudoaugustin/tailwindcss-transpiler-atom",
   "bugs": {
-    "url": "https://github.com/sudoaugustin/tailwindcss-transpiler/issues",
+    "url": "https://github.com/sudoaugustin/tailwindcss-transpiler-atom/issues",
     "email": "sudoaugustin@gmail.com",
     "twitter": "https://twitter.com/sudoAugustin"
   },
-  "homepage": "https://github.com/sudoaugustin/tailwindcss-transpiler#readme",
+  "homepage": "https://github.com/sudoaugustin/tailwindcss-transpiler-atom#readme",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
@@ -34,7 +34,7 @@
     }
   },
   "configSchema": {
-    "tailwindTranspiler.browsersList": {
+    "browsersList": {
       "type": [
         "array",
         "null"
@@ -45,12 +45,12 @@
       ],
       "description": "Add vendor prefixes to unsupported CSS properties (e. g. transform -> -ms-transform). Specify what browsers to target with an array of strings (uses [Browserslist](https://github.com/ai/browserslist)). Pass `null` to turn off."
     },
-    "tailwindTranspiler.minifyOutputFile": {
+    "minifyOutputFile": {
       "type": "boolean",
       "default": false,
       "description": "Check to minify the output file."
     },
-    "tailwindTranspiler.savePath": {
+    "savePath": {
       "description": "Set the save location of exported CSS.\n Set the path relative from Workspace Root.\n  (NOTE: Folder will be created if does not exist).",
       "type": [
         "string",
@@ -59,7 +59,7 @@
       "pattern": "^[\\~|/|\\\\]",
       "default": null
     },
-    "tailwindTranspiler.tailwindConfigPath": {
+    "tailwindConfigPath": {
       "description": "Set the location of tailwind config file.\n Set the path relative from Workspace Root.",
       "type": [
         "string",
@@ -72,6 +72,6 @@
   "scripts": {
     "dev": "ncc build src/index.js -o dist -w",
     "build": "ncc build src/index.js -o dist -m",
-    "prepublish": "npm run build && npm run build:vscode --prefix ../"
+    "apm:prepublish": "npm run build && npm run build:vscode --prefix ../"
   }
 }

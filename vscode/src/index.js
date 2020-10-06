@@ -1,22 +1,22 @@
-const vscode = require("vscode");
-const { StatusBar, OutputChannel } = require("./components");
-const { isTailwindFile, getRootPath, compileCSS } = require("../../src");
+const vscode = require('vscode');
+const { StatusBar, OutputChannel } = require('./components');
+const { isTailwindFile, getRootPath, compileCSS } = require('../../src');
 
-const getConfig = name => {
-  const config = vscode.workspace.getConfiguration(`tailwindTranspiler.${name}`);
+const getConfig = () => {
+  const config = vscode.workspace.getConfiguration(`tailwindTranspiler`);
   return { get: name => config.get(name) };
 };
 const handleSuccess = () => {
-  StatusBar.update("SUCCESS");
+  StatusBar.update('SUCCESS');
   OutputChannel.hide();
 };
 const handleError = err => {
-  StatusBar.update("ERROR");
+  StatusBar.update('ERROR');
   OutputChannel.showError(err.toString());
 };
 const handleSave = ({ fileName: filePath }) => {
   if (!isTailwindFile(filePath)) return;
-  StatusBar.update("WORKING");
+  StatusBar.update('WORKING');
   const config = getConfig();
   const paths = vscode.workspace.workspaceFolders.map(({ uri }) => uri.path);
   compileCSS({
@@ -26,10 +26,10 @@ const handleSave = ({ fileName: filePath }) => {
       paths,
     }),
     config: {
-      savePath: config.get("savePath"),
-      minifyCSS: config.get("minifyOutputFile"),
-      tailwindPath: config.get("tailwindConfigPath"),
-      browsersList: config.get("browsersList"),
+      savePath: config.get('savePath'),
+      minifyCSS: config.get('minifyOutputFile'),
+      tailwindPath: config.get('tailwindConfigPath'),
+      browsersList: config.get('browsersList'),
     },
   })
     .then(handleSuccess)

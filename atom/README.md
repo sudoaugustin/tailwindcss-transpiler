@@ -1,6 +1,6 @@
 # Tailwind CSS Transpiler
 
-<img src="https://raw.githubusercontent.com/sudoaugustin/tailwindcss-transpiler/master/.github/preview.gif">
+![](https://raw.githubusercontent.com/sudoaugustin/tailwindcss-transpiler/master/.github/preview.gif)
 
 <br/>
 Tailwind CSS Transpiler transpile/compile your tailwind CSS/SCSS files into pure CSS files.
@@ -41,45 +41,45 @@ Tailwind CSS Transpiler works only with `.tailwind.css` or `.tailwind.scss` file
 
 ## Settings
 
-### `tailwindTranspiler.minifyOutputFile`
+### `tailwindcss-transpiler.minifyOutputFile`
 
 Controls whether the exported CSS should be compressed.**Default: `false`**
 
 ```json
 {
-  "tailwindTranspiler.minifyOutputFile": true
+  "tailwindcss-transpiler.minifyOutputFile": true
 }
 ```
 
-### `tailwindTranspiler.savePath`
+### `tailwindcss-transpiler.savePath`
 
 The path to store transpiled CSS.**Default: `null`**
 <br/>_Set the path relative from workspace root._
 
 ```json
 {
-  "tailwindTranspiler.savePath": "public/css"
+  "tailwindcss-transpiler.savePath": "public/css"
 }
 ```
 
-### `tailwindTranspiler.tailwindConfigPath`
+### `tailwindcss-transpiler.tailwindConfigPath`
 
 The path for tailwind configuration file. **Default: `tailwind.config.js`**
 <br/>_Set the path relative from workspace root._
 
 ```json
 {
-  "tailwindTranspiler.tailwindConfigPath": "config/tailwind.js"
+  "tailwindcss-transpiler.tailwindConfigPath": "config/tailwind.js"
 }
 ```
 
-### `tailwindTranspiler.browsersList`
+### `tailwindcss-transpiler.browsersList`
 
 This setting controls the target browsers.See [Browserslist](https://github.com/browserslist/browserslist) docs for available queries. **Default:`[ "> 1%", "last 2 versions" ]`**
 
 ```json
 {
-  "tailwindTranspiler.browsersList": ["last 1 version", "> 1%", "ie 10"]
+  "tailwindcss-transpiler.browsersList": ["last 1 version", "> 1%", "ie 10"]
 }
 ```
 

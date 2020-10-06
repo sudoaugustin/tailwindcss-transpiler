@@ -1,25 +1,34 @@
-module.exports = editor => {
+const VSCodeConfig = (config) =>
+  Object.entries(config).reduce(
+    (config, [name, value]) => ({
+      ...config,
+      [`tailwindTranspiler.${name}`]: value,
+    }),
+    {}
+  );
+module.exports = (editor) => {
   const config = {
-    "tailwindTranspiler.browsersList": {
+    browsersList: {
       type: ["array", "null"],
       default: ["> 1%", "last 2 versions"],
       description:
         "Add vendor prefixes to unsupported CSS properties (e. g. transform -> -ms-transform). Specify what browsers to target with an array of strings (uses [Browserslist](https://github.com/ai/browserslist)). Pass `null` to turn off.",
     },
-    "tailwindTranspiler.minifyOutputFile": {
+    minifyOutputFile: {
       type: "boolean",
       default: false,
       description: "Check to minify the output file.",
     },
-    "tailwindTranspiler.savePath": {
+    savePath: {
       description:
         "Set the save location of exported CSS.\n Set the path relative from Workspace Root.\n  (NOTE: Folder will be created if does not exist).",
       type: ["string", "null"],
       pattern: "^[\\~|/|\\\\]",
       default: null,
     },
-    "tailwindTranspiler.tailwindConfigPath": {
-      description: "Set the location of tailwind config file.\n Set the path relative from Workspace Root.",
+    tailwindConfigPath: {
+      description:
+        "Set the location of tailwind config file.\n Set the path relative from Workspace Root.",
       type: ["string", "null"],
       pattern: "^[\\~|/|\\\\]",
       default: "tailwind.config.js",
@@ -27,13 +36,22 @@ module.exports = editor => {
   };
   const editors = {
     atom: {
-      consumedServices: { "status-bar": { versions: { "^1.0.0": "consumeStatusBar" } } },
+      version: "0.0.5",
+      consumedServices: {
+        "status-bar": { versions: { "^1.0.0": "consumeStatusBar" } },
+      },
       configSchema: config,
     },
     vscode: {
+      version: "0.0.6",
       activationEvents: ["workspaceContains:**/*.tailwind.{scss,css}"],
       categories: ["Other"],
-      contributes: { configuration: { title: "Tailwind CSS Transpiler Setting", properties: config } },
+      contributes: {
+        configuration: {
+          title: "Tailwind CSS Transpiler Setting",
+          properties: VSCodeConfig(config),
+        },
+      },
       galleryBanner: { color: "#f9fafb" },
       icon: "media/icon.png",
     },
@@ -69,19 +87,27 @@ module.exports = editor => {
   return {
     name: "tailwindcss-transpiler",
     displayName: "Tailwind CSS Transpiler",
-    description: "Compiles your tailwindcss files into pure CSS files. Moreover, you can also use it with SASS",
+    description:
+      "Compiles your tailwindcss files into pure CSS files. Moreover, you can also use it with SASS",
     author: "Augustin Joseph",
     license: "MIT",
-    version: "0.0.2",
     main: "./dist/index.js",
-    keywords: ["css", "sass", "scss", "tailwind", "compiler", "tailwindcs", "transpiler"],
-    repository: "https://github.com/sudoaugustin/tailwindcss-transpiler",
+    keywords: [
+      "css",
+      "sass",
+      "scss",
+      "tailwind",
+      "compiler",
+      "tailwindcs",
+      "transpiler",
+    ],
+    repository: `https://github.com/sudoaugustin/tailwindcss-transpiler-${editor}`,
     bugs: {
-      url: "https://github.com/sudoaugustin/tailwindcss-transpiler/issues",
+      url: `https://github.com/sudoaugustin/tailwindcss-transpiler-${editor}/issues`,
       email: "sudoaugustin@gmail.com",
       twitter: "https://twitter.com/sudoAugustin",
     },
-    homepage: "https://github.com/sudoaugustin/tailwindcss-transpiler#readme",
+    homepage: `https://github.com/sudoaugustin/tailwindcss-transpiler-${editor}#readme`,
     engines: { [editor]: engines[editor] },
     publisher: "sudoaugustin",
     ...editors[editor],

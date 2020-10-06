@@ -5,7 +5,7 @@ module.exports = () => {
     Item.className = "inline-block bg-inherit";
     update();
   };
-  const update = (state) => {
+  const update = state => {
     let classes = "";
     switch (state) {
       case "WORKING":
@@ -26,5 +26,5 @@ module.exports = () => {
   };
   const get = () => Item;
   const unmount = () => (Item = null);
-  return { mount, update, get };
+  return { mount, update, get, unmount };
 };

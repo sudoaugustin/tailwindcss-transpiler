@@ -5,7 +5,8 @@ const { StatusBar, BottomPanel } = require("./components");
 let subscriptions, statusBarTile;
 
 const config = (name) => atom.config.get("tailwindcss-transpiler." + name);
-console.log(config("browsersList"));
+
+console.log("SHIT");
 
 const handleSuccess = () => {
   BottomPanel.hide();

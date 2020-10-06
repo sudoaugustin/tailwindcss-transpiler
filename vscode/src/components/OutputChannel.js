@@ -1,12 +1,12 @@
-const vscode = require("vscode");
+const vscode = require('vscode');
 module.exports = () => {
   let Channel = null;
   const mount = () => {
-    Channel = vscode.window.createOutputChannel("Tailwind Transpiler");
-    Channel.show();
+    Channel = vscode.window.createOutputChannel('Tailwind Transpiler');
+    Channel.show(true);
   };
   const showError = msg => {
-    Channel.show(true);
+    Channel.show(false);
     Channel.appendLine(msg);
   };
   const hide = () => Channel.hide();

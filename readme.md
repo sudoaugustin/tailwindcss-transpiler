@@ -1,6 +1,6 @@
 # Tailwind CSS Transpiler
 
-<img src="https://raw.githubusercontent.com/sudoaugustin/tailwindcss-transpiler/master/.github/preview.gif">
+![App preview](https://raw.githubusercontent.com/sudoaugustin/tailwindcss-transpiler/master/.github/preview.gif)
 
 <br/>
 Tailwind CSS Transpiler transpile/compile your tailwind CSS/SCSS files into pure CSS files.
