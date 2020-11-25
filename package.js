@@ -36,14 +36,14 @@ module.exports = (editor) => {
   };
   const editors = {
     atom: {
-      version: "0.0.5",
+      version: "0.0.7",
       consumedServices: {
         "status-bar": { versions: { "^1.0.0": "consumeStatusBar" } },
       },
       configSchema: config,
     },
     vscode: {
-      version: "0.0.6",
+      version: "0.0.7",
       activationEvents: ["workspaceContains:**/*.tailwind.{scss,css}"],
       categories: ["Other"],
       contributes: {

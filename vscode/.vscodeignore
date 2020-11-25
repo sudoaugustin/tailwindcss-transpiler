@@ -7,5 +7,4 @@ jsconfig.json
 **/*.map
 **/.eslintrc.json
 node_modules
-
-
+src/

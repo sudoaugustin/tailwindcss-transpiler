@@ -4,4 +4,8 @@
 
 ## [0.0.4]
 
--Bug Fix
+- Bug Fix
+
+## [0.0.7]
+
+- Upgraded to TailwindCSS~2.0
