@@ -1,0 +1,51 @@
+.tailwind-loading-spinner::before {
+  animation: spin 2s linear infinite;
+}
+.left-100 {
+  position: relative;
+  left: 98%;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.bg-inherit {
+  background-color: inherit !important;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.pr-0 {
+  padding-right: 0;
+}
+.pb-4 {
+  padding-bottom: 1rem;
+}
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+.px-8 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+.text-base {
+  font-size: 1rem;
+}
+.leading-6 {
+  line-height: 1.75;
+}
+.icon.icon-x.cursor-pointer::before {
+  cursor: pointer;
+}
+.self-right {
+  align-self: flex-end;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,5 @@
+p {
+  --text-opacity: 1;
+  color: #fff5f5;
+  color: rgba(255,245,245,var(--text-opacity))
+}

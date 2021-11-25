@@ -1,0 +1,77 @@
+{
+  "name": "tailwindcss-transpiler",
+  "displayName": "Tailwind CSS Transpiler",
+  "description": "Compiles your tailwindcss files into pure CSS files. Moreover, you can also use it with SASS",
+  "author": "Augustin Joseph",
+  "license": "MIT",
+  "version": "0.0.2",
+  "main": "./dist/index.js",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "tailwind",
+    "compiler",
+    "tailwindcs",
+    "transpiler"
+  ],
+  "repository": "https://github.com/sudoaugustin/tailwindcss-transpiler-atom",
+  "bugs": {
+    "url": "https://github.com/sudoaugustin/tailwindcss-transpiler-atom/issues",
+    "email": "sudoaugustin@gmail.com",
+    "twitter": "https://twitter.com/sudoAugustin"
+  },
+  "homepage": "https://github.com/sudoaugustin/tailwindcss-transpiler-atom#readme",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "publisher": "sudoaugustin",
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "configSchema": {
+    "browsersList": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "default": [
+        "> 1%",
+        "last 2 versions"
+      ],
+      "description": "Add vendor prefixes to unsupported CSS properties (e. g. transform -> -ms-transform). Specify what browsers to target with an array of strings (uses [Browserslist](https://github.com/ai/browserslist)). Pass `null` to turn off."
+    },
+    "minifyOutputFile": {
+      "type": "boolean",
+      "default": false,
+      "description": "Check to minify the output file."
+    },
+    "savePath": {
+      "description": "Set the save location of exported CSS.\n Set the path relative from Workspace Root.\n  (NOTE: Folder will be created if does not exist).",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[\\~|/|\\\\]",
+      "default": null
+    },
+    "tailwindConfigPath": {
+      "description": "Set the location of tailwind config file.\n Set the path relative from Workspace Root.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[\\~|/|\\\\]",
+      "default": "tailwind.config.js"
+    }
+  },
+  "scripts": {
+    "dev": "ncc build src/index.js -o dist -w",
+    "build": "ncc build src/index.js -o dist -m",
+    "apm:prepublish": "npm run build && npm run build:vscode --prefix ../"
+  }
+}

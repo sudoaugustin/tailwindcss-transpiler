@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "build:vscode": "node build.js -vscode",
+    "build:atom": "node build.js -atom",
+    "package:vscode": "node build.js -package -vscode",
+    "package:atom": "node build.js -package -atom",
+    "readme:vscode": "node build.js -readme -vscode",
+    "readme:atom": "node build.js -readme -atom"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.2",
+    "clean-css": "^4.2.3",
+    "nodemon": "^2.0.6",
+    "postcss": "^8.1.10",
+    "precss": "^4.0.0",
+    "tailwindcss": "^2.0.0-compat"
+  }
+}
